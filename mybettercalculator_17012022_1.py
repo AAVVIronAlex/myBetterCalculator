@@ -5,23 +5,23 @@ print ("Hello, Welcome to my Calculator")
 question_1 = input ("Input either of these (sum, difference, square equation, multiply, division(more coming soon)): ")
 
 if (question_1 == "sum"):
-    a = int (input ("Input a:"))
-    b = int (input ("Input b:"))
+    a = int (input ("Input a: "))
+    b = int (input ("Input b: "))
     print (a + b)
 
 elif (question_1 == "difference"):
-    a = int (input ("Input a:"))
-    b = int (input ("Input b:"))
+    a = int (input ("Input a: "))
+    b = int (input ("Input b: "))
     print (a - b)
 
 elif (question_1 == "multiply"):
-    a = int (input ("Input a:"))
-    b = int (input ("Input b:"))
+    a = int (input ("Input a: "))
+    b = int (input ("Input b: "))
     print (a * b)
 
 elif (question_1 == "division"):
-    a = int (input ("Input a:"))
-    b = int (input ("Input b:"))
+    a = int (input ("Input a: "))
+    b = int (input ("Input b: "))
     print (a / b)
 
 elif (question_1 == "square_equasion"):
