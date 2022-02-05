@@ -36,14 +36,14 @@ elif (question_1 == "root"):
 
 elif (question_1 == "factorial"):
     a = int (input ("Input a(for the a! or a factorial formula): "))
-    n = a
+    factorialalex = 1
     if (a == 0):
         print("0! = 1")
     else:
-        while (n > 1):
-            factorialalex = n * (n - 1)
-            n = n - 1 
+        for i in range(1, a + 1):
+            factorial = factorialalex * i 
         print(a, "! = ", factorialalex)
+
     #add the a^2 + b^2 formula family...
 
 elif (question_1 == "squareeq"):
