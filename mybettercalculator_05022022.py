@@ -66,6 +66,7 @@ elif (question_1 == "squareeq"):
         #print ('x1 = (- b - sqrt (D)) / 2a =', x1, "+ i")
         #print ('x2 = (- b + sqrt (D)) / 2a =', x2, "+ i")
         print("X can't be any number from the Real Numbers")
+        #make irreal number support
 
     elif (b2 - ac > 0):
         x1 = (- b - math.sqrt ((b2 - ac))) / (2 * a)
