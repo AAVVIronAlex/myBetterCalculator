@@ -45,6 +45,7 @@ elif (question_1 == "factorial"):
         print(a, "! = ", factorialalex)
 
     #add the a^2 + b^2 formula family...
+    #add sin cos tan cot and more
 
 elif (question_1 == "squareeq"):
     print ('Input a, for the ax2 + bx + c formula: ')
