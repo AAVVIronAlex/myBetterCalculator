@@ -66,6 +66,27 @@ elif (question_1 == "sin"):
         print("sin(135) = - 1 / 2")
     elif (a == 180):
         print("sin(180) == 1")
+        
+elif (question_1 == "cos"):
+    a = int (input ("Input the angle in degrees for the cos(angle) formula(0, 30, 45, 60, 90, 120, 135, 150, 180): "))
+    if (a == 0):
+        print("cos(0) = 1")
+    elif (a == 30):
+        print("cos(30) = sqrt(3) / 2")
+    elif (a == 45):
+        print("cos(45) = sqrt(2) / 2")
+    elif (a == 60):
+        print("cos(60) = 0.5")
+    elif (a == 90):
+        print("cos(90) = 0")
+    elif (a == 120):
+        print("cos(120) = - 0.5")
+    elif (a == 135):
+        print("cos(135) = - sqrt(2) / 2")
+    elif (a == 150):
+        print("cos(135) = - sqrt(3) / 2")
+    elif (a == 180):
+        print("cos(180) == - 1")
 
 elif (question_1 == "squareeq"):
     print ('Input a, for the ax2 + bx + c formula: ')
