@@ -43,8 +43,6 @@ elif (question_1 == "factorial"):
         for i in range(1, a + 1):
             factorial = factorialalex * i 
         print(a, "! = ", factorialalex)
-
-    #add the a^2 - b^2 formula family...
     
 elif (question_1 == "percentage"):
     a = int (input ("Input a(for the a %% b formula): "))

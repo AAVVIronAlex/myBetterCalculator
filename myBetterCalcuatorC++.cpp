@@ -4,37 +4,37 @@
 
 long sum(long long a, long long b)
 {
-	std::cout << "a + b = " << a + b;
+	std::cout << "a + b = " << a + b << std::endl;
 	return 0;
 }
 
 long difference(long long a, long long b)
 {
-	std::cout << "a - b = " << a - b;
+	std::cout << "a - b = " << a - b << std::endl;
 	return 0;
 }
 
 long multiplication(long long a, long long b)
 {
-	std::cout << "a * b = " << a * b;
+	std::cout << "a * b = " << a * b << std::endl;
 	return 0;
 }
 
 long division(long long a, long long b)
 {
-	std::cout << "a / b = " << a / b;
+	std::cout << "a / b = " << a / b << std::endl;
 	return 0;
 }
 
 long power(long long a, long long b)
 {
-	std::cout << "a ^ b = " << pow(a, b);
+	std::cout << "a ^ b = " << pow(a, b) << std::endl;
 	return 0;
 }
 
 long root(long long a, long long b)
 {
-	std::cout << "a ^ 1 / b = " << pow(a, 1 / b);
+	std::cout << "a ^ 1 / b = " << pow(a, 1 / b) << std::endl;
 	return 0;
 }
 
@@ -50,32 +50,34 @@ long square_equation(double a, double b, double c)
 
 	if (b2 - ac < 0)
 	{
-		std::cout << "X can't be any number from the Real Numbers";
+		std::cout << "X can't be any number from the Real Numbers"  << std::endl;
 	}
 
 	else if (b2 - ac > 0)
 	{
 		x1 = (-b - sqrt((b2 - ac))) / (2 * a);
 		x2 = (-b + sqrt((b2 - ac))) / (2 * a);
-		std::cout << "D = b * b - 4ac = " << b2 - ac << "sqrt (" << b2 - ac << ") =" << sqrt(b2 - ac);
-		std::cout << "x1 = (-b - sqrt(D)) / 2a = " << x1;
-		std::cout << "x2 = (- b + sqrt (D)) / 2a =" << x2;
+		std::cout << "D = b * b - 4ac = " << b2 - ac << "sqrt (" << b2 - ac << ") =" << sqrt(b2 - ac) << std::endl;
+		std::cout << "x1 = (-b - sqrt(D)) / 2a = " << x1 << std::endl;
+		std::cout << "x2 = (- b + sqrt (D)) / 2a =" << x2 << std::endl;
 	}
 
 	else
 	{
 		x1 = (-b - sqrt((b2 - ac))) / (2 * a);
-		std::cout << "D = b * b - 4ac = " << b2 - ac << "sqrt (" << b2 - ac << ") =" << sqrt(b2 - ac);
-		std::cout << "x = (-b - sqrt(D)) / 2a = " << x1;
+		std::cout << "D = b * b - 4ac = " << b2 - ac << "sqrt (" << b2 - ac << ") =" << sqrt(b2 - ac) << std::endl;
+		std::cout << "x = (-b - sqrt(D)) / 2a = " << x1 << std::endl;
 	}
 
 	return 0;
 }
 
-long main()
+int main()
 {
 	long a, b, c;
 
+	std::cout << "Hello, Welcome to my Calculator" << std::endl;
+	std::cout << "Input either of these (sum, difference, squareeq, multiply, division, root, power(more coming soon)): ";
 	std::string question1;
 	std::cin >> question1;
 
@@ -142,5 +144,10 @@ long main()
 		std::cout << "Input c, for the ax2 + bx + c formula: ";
 		std::cin >> c;
 		square_equation(a, b, c);
+	}
+
+	else
+	{
+		std::cout << "Try again." << std::endl;
 	}
 }
