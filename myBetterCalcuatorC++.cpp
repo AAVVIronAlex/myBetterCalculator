@@ -103,16 +103,16 @@ int main()
 	{
 		std::cout << "Input a, for the a * b formula: ";
 		std::cin >> a;
-		std::cout << "Input a, for the a * b formula: ";
+		std::cout << "Input b, for the a * b formula: ";
 		std::cin >> b;
 		multiplication(a, b);
 	}
 
-	else if (question1 == "divide")
+	else if (question1 == "division")
 	{
 		std::cout << "Input a, for the a / b formula: ";
 		std::cin >> a;
-		std::cout << "Input a, for the a / b formula: ";
+		std::cout << "Input b, for the a / b formula: ";
 		std::cin >> b;
 		division(a, b);
 	}
@@ -121,7 +121,7 @@ int main()
 	{
 		std::cout << "Input a, for the a ^ b formula: ";
 		std::cin >> a;
-		std::cout << "Input a, for the a ^ b formula: ";
+		std::cout << "Input b (power), for the a ^ b formula: ";
 		std::cin >> b;
 		power(a, b);
 	}

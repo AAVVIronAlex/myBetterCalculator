@@ -5,33 +5,33 @@ print ("Hello, Welcome to my Calculator")
 question_1 = input ("Input either of these (sum, difference, squareeq, multiply, division, root, power(more coming soon)): ")
 
 if (question_1 == "sum"):
-    a = int (input ("Input a: "))
-    b = int (input ("Input b: "))
+    a = int (input ("Input a, for the a + b formula: "))
+    b = int (input ("Input b, for the a + b formula: "))
     print (a, "+", b, "=", a + b)
 
 elif (question_1 == "difference"):
-    a = int (input ("Input a: "))
-    b = int (input ("Input b: "))
+    a = int (input ("Input a, for the a - b formula: "))
+    b = int (input ("Input b, for the a - b formula: "))
     print ("a + b =", a, "-", b, "=", a - b)
 
 elif (question_1 == "multiply"):
-    a = int (input ("Input a: "))
-    b = int (input ("Input b: "))
+    a = int (input ("Input a, for the a * b formula: "))
+    b = int (input ("Input b, for the a * b formula: "))
     print ("a - b =", a, "*", b, "=", a * b)
 
 elif (question_1 == "division"):
-    a = int (input ("Input a: "))
-    b = int (input ("Input b: "))
+    a = int (input ("Input a, for the a / b formula: "))
+    b = int (input ("Input b, for the a / b formula: "))
     print ("a / b =", a, "/", b, "=", a / b)
 
 elif (question_1 == "power"):
-    a = int (input ("Input a: "))
-    b = int (input ("Input b(power): "))
+    a = int (input ("Input a, for the a ^ b formula: "))
+    b = int (input ("Input b (power), for the a ^ b formula: "))
     print ("a ^ b =", a, "^", b, "=", math.pow (a, b))
 
 elif (question_1 == "root"):
-    a = int (input ("Input a: "))
-    b = int (input ("Input b(power): "))
+    a = int (input ("Input a, for the a ^ 1 / b formula: "))
+    b = int (input ("Input b, for the a ^ 1 / b formula: "))
     print("a ^ 1 / b =", a, "^ 1 /", b, "=", math.pow(a, 1 / b))
 
 elif (question_1 == "factorial"):
