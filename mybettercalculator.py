@@ -40,8 +40,8 @@ elif (question_1 == "factorial"):
     if (a == 0):
         print("0! = 1")
     else:
-        for i in range(1, a + 1):
-            factorial = factorialalex * i 
+        for i in range(1, a + 1) :
+            factorialalex = factorialalex * i
         print(a, "! = ", factorialalex)
     
 elif (question_1 == "percentage"):

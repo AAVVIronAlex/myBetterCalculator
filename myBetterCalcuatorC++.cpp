@@ -38,6 +38,23 @@ long root(long long a, long long b)
 	return 0;
 }
 
+long factorial(long long a)
+{
+	long long factorialalex = 1;
+	if (a == 0)
+	{
+		std::cout << "0! = 1";
+	}
+	else
+	{
+		for (long long i = 1; i <= a; i++)
+		{
+			factorialalex = factorialalex * i;
+		}
+		std::cout << a << "! = " << factorialalex << std::endl;
+ 	}
+}
+
 long square_equation(double a, double b, double c)
 {
 	int b2;
@@ -74,7 +91,7 @@ long square_equation(double a, double b, double c)
 
 int main()
 {
-	long a, b, c;
+	long long a, b, c;
 
 	std::cout << "Hello, Welcome to my Calculator" << std::endl;
 	std::cout << "Input either of these (sum, difference, squareeq, multiply, division, root, power(more coming soon)): ";
@@ -144,6 +161,13 @@ int main()
 		std::cout << "Input c, for the ax2 + bx + c formula: ";
 		std::cin >> c;
 		square_equation(a, b, c);
+	}
+
+	else if (question1 == "factorial")
+	{
+		std::cout << "Input a(for the a! or a factorial formula): ";
+		std::cin >> a;
+		factorial(a);
 	}
 
 	else
