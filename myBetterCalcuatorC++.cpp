@@ -53,6 +53,7 @@ long factorial(long long a)
 		}
 		std::cout << a << "! = " << factorialalex << std::endl;
  	}
+	return 0;
 }
 
 long square_equation(double a, double b, double c)
