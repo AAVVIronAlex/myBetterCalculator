@@ -2,61 +2,60 @@
 #include <cmath>
 #include <cstring>
 
-long sum(long long a, long long b)
+void sum(long double a, long double b)
 {
 	std::cout << "a + b = " << a + b << std::endl;
-	return 0;
 }
 
-long difference(long long a, long long b)
+void difference(long double a, long double b)
 {
 	std::cout << "a - b = " << a - b << std::endl;
-	return 0;
 }
 
-long multiplication(long long a, long long b)
+void multiplication(long double a, long double b)
 {
 	std::cout << "a * b = " << a * b << std::endl;
-	return 0;
 }
 
-long division(long long a, long long b)
+void division(long double a, long double b)
 {
 	std::cout << "a / b = " << a / b << std::endl;
-	return 0;
 }
 
-long power(long long a, long long b)
+void power(long double a, long double b)
 {
 	std::cout << "a ^ b = " << pow(a, b) << std::endl;
-	return 0;
 }
 
-long root(long long a, long long b)
+void root(long double a, long double b)
 {
 	std::cout << "a ^ 1 / b = " << pow(a, 1 / b) << std::endl;
-	return 0;
 }
 
-long factorial(long long a)
+void factorial(long double a)
 {
-	long long factorialalex = 1;
+	long double factorialalex = 1;
 	if (a == 0)
 	{
 		std::cout << "0! = 1";
 	}
 	else
 	{
-		for (long long i = 1; i <= a; i++)
+		for (long double i = 1; i <= a; i++)
 		{
 			factorialalex = factorialalex * i;
 		}
 		std::cout << a << "! = " << factorialalex << std::endl;
  	}
-	return 0;
 }
 
-long square_equation(double a, double b, double c)
+void percentage(long double a, long double b)
+{
+	long double percentage = a * b / 100;
+	std::cout << "a %% b = " << percentage << "%" << std::endl;
+}
+
+void square_equation(long double a, long double b, long double c)
 {
 	int b2;
 	int ac;
@@ -86,13 +85,11 @@ long square_equation(double a, double b, double c)
 		std::cout << "D = b * b - 4ac = " << b2 - ac << "sqrt (" << b2 - ac << ") =" << sqrt(b2 - ac) << std::endl;
 		std::cout << "x = (-b - sqrt(D)) / 2a = " << x1 << std::endl;
 	}
-
-	return 0;
 }
 
 int main()
 {
-	long long a, b, c;
+	long double a, b, c;
 
 	std::cout << "Hello, Welcome to my Calculator" << std::endl;
 	std::cout << "Input either of these (sum, difference, squareeq, multiply, division, root, power(more coming soon)): ";
@@ -169,6 +166,15 @@ int main()
 		std::cout << "Input a(for the a! or a factorial formula): ";
 		std::cin >> a;
 		factorial(a);
+	}
+
+	else if (question1 == "percentage")
+	{
+		std::cout << "Input a(for the a %% b formula): ";
+		std::cin >> a;
+		std::cout << "Input b(for the a %% b formula): ";
+		std::cin >> b;
+		percentage(a, b);
 	}
 
 	else
