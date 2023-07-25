@@ -55,9 +55,14 @@ void percentage(long double a, long double b)
 	std::cout << "a %% b = " << percentage << "%" << std::endl;
 }
 
-void square_of_a_binomial(long double a, long double b)
+void square_of_the_sum(long double a, long double b)
 {
 	std::cout << "(a + b)^2 = a^2 + 2 * a * b + b^2 = " << a * a + 2 * a * b + b * b << std::endl;
+}
+
+void square_of_the_difference(long double a, long double b)
+{
+	std::cout << "(a - b)^2 = a^2 - 2 * a * b + b^2 = " << a * a - 2 * a * b + b * b << std::endl;
 }
 
 void square_equation(long double a, long double b, long double c)
@@ -182,13 +187,22 @@ int main()
 		percentage(a, b);
 	}
 
-	else if (question1 == "squareofabinomial")
+	else if (question1 == "squareofthesum")
 	{
 		std::cout << "Input a(for the (a + b)^2 formula): ";
 		std::cin >> a;
 		std::cout << "Input b(for the (a + b)^2 formula): ";
 		std::cin >> b;
-		square_of_a_binomial(a, b);
+		square_of_the_sum(a, b);
+	}
+
+	else if (question1 == "squareofthedifference")
+	{
+		std::cout << "Input a(for the (a - b)^2 formula): ";
+		std::cin >> a;
+		std::cout << "Input b(for the (a - b)^2 formula): ";
+		std::cin >> b;
+		square_of_the_difference(a, b);
 	}
 
 	else
