@@ -50,17 +50,17 @@ elif (question_1 == "percentage"):
     percentage = a * b / 100
     print("a %% b =", "%s%%"% percentage)
 
-elif (question_1 == "(a + b)^2"):
+elif (question_1 == "squareofthesum"):
     a = int (input ("Input a(for the (a + b)^2 formula): "))
     b = int (input ("Input b(for the (a + b)^2 formula): "))
     print("(a + b)^2 = a^2 + 2 * a * b + b^2 =", a * a + 2 * a * b + b * b)
 
-elif (question_1 == "(a - b)^2"):
+elif (question_1 == "squareofthedifference"):
     a = int (input ("Input a(for the (a - b)^2 formula): "))
     b = int (input ("Input b(for the (a - b)^2 formula): "))
     print("(a - b)^2 = a^2 - 2 * a * b + b^2 =", a * a - 2 * a * b + b * b)
 
-elif (question_1 == "a^2 - b^2"):
+elif (question_1 == "differenceofsquares"):
     a = int (input ("Input a(for the a^2 - b^2 formula): "))
     b = int (input ("Input b(for the a^2 - b^2 formula): "))
     print("a^2 - b^2 = (a - b) * (a + b) =", (a - b) * (a + b))

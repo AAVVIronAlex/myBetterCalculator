@@ -65,6 +65,11 @@ void square_of_the_difference(long double a, long double b)
 	std::cout << "(a - b)^2 = a^2 - 2 * a * b + b^2 = " << a * a - 2 * a * b + b * b << std::endl;
 }
 
+void difference_of_squares(long double a, long double b)
+{
+	std::cout << "a^2 - b^2 = (a - b) * (a + b) = " << (a - b) * (a + b) << std::endl;
+}
+
 void square_equation(long double a, long double b, long double c)
 {
 	int b2;
@@ -203,6 +208,15 @@ int main()
 		std::cout << "Input b(for the (a - b)^2 formula): ";
 		std::cin >> b;
 		square_of_the_difference(a, b);
+	}
+
+	else if (question1 == "differenceofsquares")
+	{
+		std::cout << "Input a(for the (a - b)^2 formula): ";
+		std::cin >> a; 
+		std::cout << "Input b(for the (a - b)^2 formula): ";
+		std::cin >> b;
+		difference_of_squares(a, b);
 	}
 
 	else
