@@ -82,7 +82,7 @@ void square_equation(long double a, long double b, long double c)
 
 	if (b2 - ac < 0)
 	{
-		std::cout << "X can't be any number from the Real Numbers"  << std::endl;
+		std::cout << "X can't be any number from the Real Numbers" << std::endl;
 	}
 
 	else if (b2 - ac > 0)
