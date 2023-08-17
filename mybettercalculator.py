@@ -168,7 +168,7 @@ elif (question_1 == "squareeq"):
         #print ('D = b * b - 4ac =', b2 - ac, "sqrt (", b2 - ac, ") =", - math.sqrt (- b2 + ac))
         #print ('x1 = (- b - sqrt (D)) / 2a =', x1, "+ i")
         #print ('x2 = (- b + sqrt (D)) / 2a =', x2, "+ i")
-        print("X can't be any number from the Real Numbers")
+        print("X can't be any number from the Real Numbers.")
         #make irreal number support
 
     elif (b2 - ac > 0):
