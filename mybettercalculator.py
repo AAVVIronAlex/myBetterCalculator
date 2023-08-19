@@ -1,6 +1,6 @@
 import math
 
-print ("Hello, Welcome to my Calculator")
+print ("Hello, welcome to my Calculator")
 
 question_1 = input ("Input either of these sum, difference, squareeq, multiply, division, root, power, percentage, squareofthesum, squareofthedifference, differenceofsquares (more coming soon): ")
 
