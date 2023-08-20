@@ -2,7 +2,7 @@ import math
 
 print ("Hello, welcome to my Calculator")
 
-question_1 = input ("Input either of these sum, difference, squareeq, multiply, division, root, power, percentage, squareofthesum, squareofthedifference, differenceofsquares (more coming soon): ")
+question_1 = input ("Input either of these sum, difference, squareeq, multiply, division, root, power, percentage, squareofthesum, squareofthedifference, differenceofsquares and there are more coming soon: ")
 
 if (question_1 == "sum"):
     a = int (input ("Input a, for the a + b formula: "))
