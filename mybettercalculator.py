@@ -66,25 +66,17 @@ elif (question_1 == "differenceofsquares"):
     print("a^2 - b^2 = (a - b) * (a + b) =", (a - b) * (a + b))
 
 elif (question_1 == "sin"):
-    a = int (input ("Input the angle in degrees for the sin(angle) formula(0, 30, 45, 60, 90, 120, 135, 150, 180): "))
-    if (a == 0):
-        print("sin(0) = 0")
-    elif (a == 30):
-        print("sin(30) = 0.5")
-    elif (a == 45):
-        print("sin(45) = sqrt(2) / 2")
-    elif (a == 60):
-        print("sin(60) = sqrt(3) / 2")
-    elif (a == 90):
-        print("sin(90) = 1")
-    elif (a == 120):
-        print("sin(120) = sqrt(3) / 2")
-    elif (a == 135):
-        print("sin(135) = sqrt(2) / 2")
-    elif (a == 150):
-        print("sin(135) = 0.5")
-    elif (a == 180):
-        print("sin(180) == 1")
+    a = int (input ("Input the angle in degrees for the sin(angle) formula: "))
+    radian_a = (3.141592653589793 / 180) * a 
+    print("sin(", a, ") = ", 
+    round(radian_a - math.pow(radian_a, 3) / math.factorial(3) + 
+    math.pow(radian_a, 7) / math.factorial(7) - 
+    math.pow(radian_a, 9) / math.factorial(9) + 
+    math.pow(radian_a, 11) / math.factorial(11) - 
+    math.pow(radian_a, 13) / math.factorial(13) + 
+    math.pow(radian_a, 15) / math.factorial(15) - 
+    math.pow(radian_a, 17) / math.factorial(17) + 
+    math.pow(radian_a, 19) / math.factorial(19), 3))
 
 elif (question_1 == "cos"):
     a = int (input ("Input the angle in degrees for the cos(angle) formula(0, 30, 45, 60, 90, 120, 135, 150, 180): "))
