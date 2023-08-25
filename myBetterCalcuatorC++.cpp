@@ -2,6 +2,23 @@
 #include <cmath>
 #include <cstring>
 
+long double factorial_fuction(long double a)
+{
+	long double factorialalex = 1;
+	if (a == 0)
+	{
+		std::cout << "0! = 1";
+	}
+	else
+	{
+		for (long double i = 1; i <= a; i++)
+		{
+			factorialalex = factorialalex * i;
+		}
+ 	}
+	return factorialalex;
+}
+
 void sum(long double a, long double b)
 {
 	std::cout << "a + b = " << a + b << std::endl;
@@ -68,6 +85,19 @@ void square_of_the_difference(long double a, long double b)
 void difference_of_squares(long double a, long double b)
 {
 	std::cout << "a^2 - b^2 = (a - b) * (a + b) = " << (a - b) * (a + b) << std::endl;
+}
+
+void sine(long double a)
+{
+	long double radian_a = (3.141592653589793 / 180) * a;
+	std::cout << "sin(" << a << ") = " << floor((radian_a - pow(radian_a, 3) / factorial_fuction(3) + 
+    pow(radian_a, 7) / factorial_fuction(7) - 
+    pow(radian_a, 9) / factorial_fuction(9) + 
+    pow(radian_a, 11) / factorial_fuction(11) - 
+    pow(radian_a, 13) / factorial_fuction(13) + 
+    pow(radian_a, 15) / factorial_fuction(15) - 
+    pow(radian_a, 17) / factorial_fuction(17) + 
+    pow(radian_a, 19) / factorial_fuction(19)) * 100 + 0.5) / 100 << std::endl;
 }
 
 void square_equation(long double a, long double b, long double c)
@@ -217,6 +247,13 @@ int main()
 		std::cout << "Input b(for the (a - b)^2 formula): ";
 		std::cin >> b;
 		difference_of_squares(a, b);
+	}
+
+	else if (question1 == "sin")
+	{
+		std::cout << "Input the angle in degrees for the sin(angle) formula: ";
+		std::cin >> a;
+		sine(a);
 	}
 
 	else
