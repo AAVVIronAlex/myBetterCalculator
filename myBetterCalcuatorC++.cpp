@@ -51,19 +51,7 @@ void root(long double a, long double b)
 
 void factorial(long double a)
 {
-	long double factorialalex = 1;
-	if (a == 0)
-	{
-		std::cout << "0! = 1";
-	}
-	else
-	{
-		for (long double i = 1; i <= a; i++)
-		{
-			factorialalex = factorialalex * i;
-		}
-		std::cout << a << "! = " << factorialalex << std::endl;
- 	}
+	std::cout << a << "! = " << factorial_fuction(a) << std::endl;
 }
 
 void percentage(long double a, long double b)
