@@ -70,34 +70,28 @@ elif (question_1 == "sin"):
     radian_a = (3.141592653589793 / 180) * a 
     print("sin(", a, ") = ", 
     round(radian_a - math.pow(radian_a, 3) / math.factorial(3) + 
-    math.pow(radian_a, 7) / math.factorial(7) - 
-    math.pow(radian_a, 9) / math.factorial(9) + 
-    math.pow(radian_a, 11) / math.factorial(11) - 
-    math.pow(radian_a, 13) / math.factorial(13) + 
-    math.pow(radian_a, 15) / math.factorial(15) - 
-    math.pow(radian_a, 17) / math.factorial(17) + 
+    math.pow(radian_a, 5) / math.factorial(5) - 
+    math.pow(radian_a, 7) / math.factorial(7) + 
+    math.pow(radian_a, 9) / math.factorial(9) - 
+    math.pow(radian_a, 11) / math.factorial(11) + 
+    math.pow(radian_a, 13) / math.factorial(13) - 
+    math.pow(radian_a, 15) / math.factorial(15) + 
+    math.pow(radian_a, 17) / math.factorial(17) - 
     math.pow(radian_a, 19) / math.factorial(19), 3))
 
 elif (question_1 == "cos"):
-    a = int (input ("Input the angle in degrees for the cos(angle) formula(0, 30, 45, 60, 90, 120, 135, 150, 180): "))
-    if (a == 0):
-        print("cos(0) = 1")
-    elif (a == 30):
-        print("cos(30) = sqrt(3) / 2")
-    elif (a == 45):
-        print("cos(45) = sqrt(2) / 2")
-    elif (a == 60):
-        print("cos(60) = 0.5")
-    elif (a == 90):
-        print("cos(90) = 0")
-    elif (a == 120):
-        print("cos(120) = - 0.5")
-    elif (a == 135):
-        print("cos(135) = - sqrt(2) / 2")
-    elif (a == 150):
-        print("cos(135) = - sqrt(3) / 2")
-    elif (a == 180):
-        print("cos(180) == - 1")
+    a = int (input ("Input the angle in degrees for the cos(angle) formula: "))
+    radian_a = (3.141592653589793 / 180) * a 
+    print("cos(", a, ") = ", 
+    round(1 - math.pow(radian_a, 2) / math.factorial(2) + 
+    math.pow(radian_a, 4) / math.factorial(4) - 
+    math.pow(radian_a, 6) / math.factorial(6) + 
+    math.pow(radian_a, 8) / math.factorial(8) - 
+    math.pow(radian_a, 10) / math.factorial(10) + 
+    math.pow(radian_a, 12) / math.factorial(12) - 
+    math.pow(radian_a, 14) / math.factorial(14) + 
+    math.pow(radian_a, 16) / math.factorial(16) - 
+    math.pow(radian_a, 18) / math.factorial(18), 3))
 
 elif (question_1 == "tan"):
     a = int (input ("Input the angle in degrees for the tan(angle) formula(0, 30, 45, 60, 90, 120, 135, 150, 180): "))
