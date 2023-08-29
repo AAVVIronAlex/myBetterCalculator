@@ -79,13 +79,28 @@ void sine(long double a)
 {
 	long double radian_a = (3.141592653589793 / 180) * a;
 	std::cout << "sin(" << a << ") = " << floor((radian_a - pow(radian_a, 3) / factorial_fuction(3) + 
-    pow(radian_a, 7) / factorial_fuction(7) - 
-    pow(radian_a, 9) / factorial_fuction(9) + 
-    pow(radian_a, 11) / factorial_fuction(11) - 
-    pow(radian_a, 13) / factorial_fuction(13) + 
-    pow(radian_a, 15) / factorial_fuction(15) - 
-    pow(radian_a, 17) / factorial_fuction(17) + 
+	pow(radian_a, 5) / factorial_fuction(5) - 
+    pow(radian_a, 7) / factorial_fuction(7) + 
+    pow(radian_a, 9) / factorial_fuction(9) - 
+    pow(radian_a, 11) / factorial_fuction(11) + 
+    pow(radian_a, 13) / factorial_fuction(13) - 
+    pow(radian_a, 15) / factorial_fuction(15) + 
+    pow(radian_a, 17) / factorial_fuction(17) - 
     pow(radian_a, 19) / factorial_fuction(19)) * 100 + 0.5) / 100 << std::endl;
+}
+
+void cosine(long double a)
+{
+	long double radian_a = (3.141592653589793 / 180) * a;
+	std::cout << "cos(" << a << ") = " << floor((1 - pow(radian_a, 2) / factorial_fuction(2) + 
+	pow(radian_a, 4) / factorial_fuction(4) - 
+    pow(radian_a, 6) / factorial_fuction(6) + 
+    pow(radian_a, 8) / factorial_fuction(8) - 
+    pow(radian_a, 10) / factorial_fuction(10) + 
+    pow(radian_a, 12) / factorial_fuction(12) - 
+    pow(radian_a, 14) / factorial_fuction(14) + 
+    pow(radian_a, 16) / factorial_fuction(16) - 
+    pow(radian_a, 18) / factorial_fuction(18)) * 100 + 0.5) / 100 << std::endl;
 }
 
 void square_equation(long double a, long double b, long double c)
@@ -242,6 +257,13 @@ int main()
 		std::cout << "Input the angle in degrees for the sin(angle) formula: ";
 		std::cin >> a;
 		sine(a);
+	}
+
+	else if (question1 == "cos")
+	{
+		std::cout << "Input the angle in degrees for the cos(angle) formula: ";
+		std::cin >> a;
+		cosine(a);
 	}
 
 	else
