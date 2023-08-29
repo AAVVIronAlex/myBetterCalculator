@@ -67,7 +67,7 @@ elif (question_1 == "differenceofsquares"):
 
 elif (question_1 == "sin"):
     a = int (input ("Input the angle in degrees for the sin(angle) formula: "))
-    radian_a = (3.141592653589793 / 180) * a 
+    radian_a = (3.141592653589793 / 180) * a
     print("sin(", a, ") = ", 
     round(radian_a - math.pow(radian_a, 3) / math.factorial(3) + 
     math.pow(radian_a, 5) / math.factorial(5) - 
@@ -81,7 +81,7 @@ elif (question_1 == "sin"):
 
 elif (question_1 == "cos"):
     a = int (input ("Input the angle in degrees for the cos(angle) formula: "))
-    radian_a = (3.141592653589793 / 180) * a 
+    radian_a = (3.141592653589793 / 180) * a
     print("cos(", a, ") = ", 
     round(1 - math.pow(radian_a, 2) / math.factorial(2) + 
     math.pow(radian_a, 4) / math.factorial(4) - 
