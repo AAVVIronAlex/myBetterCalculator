@@ -2,7 +2,7 @@ import math
 
 print ("Hello, welcome to my Calculator")
 
-question_1 = input ("Input either of these sum, difference, squareeq, multiply, division, root, power, percentage, squareofthesum, squareofthedifference, differenceofsquares and there are more coming soon: ")
+question_1 = input ("Input either of these sum, difference, squareeq, multiply, division, root, power, percentage, squareofthesum, squareofthedifference, differenceofsquares, sin and there are more coming soon: ")
 
 if (question_1 == "sum"):
     a = int (input ("Input a, for the a + b formula: "))
@@ -168,6 +168,9 @@ elif (question_1 == "squareeq"):
         x1 = (- b - math.sqrt ((b2 - ac))) / (2 * a)
         print ('D = b * b + 4ac =', b2 - ac, "sqrt (", b2 - ac, ") =", math.sqrt (b2 - ac))
         print ("x = (- b - sqrt (0)) / 2a =", x1)
+
+elif (question_1 == "help"):
+    print("Welcome to the help menu of this program.\n\nHere are some of the options you should consider using:\nsum - Calculating the sum of two numbers.\ndifference - Calculating the difference of the two numbers.\nmultiply - Calculating the product of the two numbers.\ndivision - Calculating the quotient of the two inputed numbers.")
 
 else:
     print ("Try again.")
