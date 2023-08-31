@@ -266,6 +266,11 @@ int main()
 		cosine(a);
 	}
 
+	else if (question1 == "help")
+	{
+		std::cout << "Welcome to the help menu of this program.\n\nHere are some of the options you should consider using:\nsum - Calculating the sum of two numbers.\ndifference - Calculating the difference of the two numbers.\nmultiply - Calculating the product of the two numbers.\ndivision - Calculating the quotient of the two inputed numbers." << std::endl;
+	}
+
 	else
 	{
 		std::cout << "Try again." << std::endl;
