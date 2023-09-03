@@ -8,7 +8,7 @@ def sin_function(a):
         turn_multiplier = turn * 2 + 1
         unrounded_answer = unrounded_answer + math.pow(radian_a, turn_multiplier) / math.factorial(turn_multiplier) * math.pow(-1, turn)
 
-    answer = round(unrounded_answer, 3)
+    answer = round(unrounded_answer, 6)
     return answer
 
 def cos_function(a):
@@ -19,7 +19,7 @@ def cos_function(a):
         turn_multiplier = turn * 2
         unrounded_answer = unrounded_answer + math.pow(radian_a, turn_multiplier) / math.factorial(turn_multiplier) * math.pow(-1, turn)
 
-    answer = round(unrounded_answer, 3)
+    answer = round(unrounded_answer, 6)
     return answer
 
 print ("Hello, welcome to my Calculator")

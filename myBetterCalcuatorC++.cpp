@@ -5,10 +5,12 @@
 long double factorial_fuction(long double a)
 {
 	long double factorialalex = 1;
+
 	if (a == 0)
 	{
 		std::cout << "0! = 1";
 	}
+
 	else
 	{
 		for (long double i = 1; i <= a; i++)
@@ -16,7 +18,38 @@ long double factorial_fuction(long double a)
 			factorialalex = factorialalex * i;
 		}
  	}
+
 	return factorialalex;
+}
+
+long double sin_function(long double a)
+{
+	long double radian_a = (3.141592653589793 / 180) * a;
+	long double unrounded_answer = radian_a;
+
+	for (short turn = 1; turn <= 9; turn++)
+	{
+		short turn_multiplier = turn * 2 + 1;
+		unrounded_answer = unrounded_answer + pow(radian_a, turn_multiplier) / factorial_fuction(turn_multiplier) * pow(-1, turn);
+	}
+
+	long double answer = floor(unrounded_answer * 100 + 0.5) / 100;
+	return unrounded_answer;
+}
+
+long double cos_function(long double a)
+{
+	long double radian_a = (3.141592653589793 / 180) * a;
+	long double unrounded_answer = 1;
+
+	for (short turn = 1; turn <= 9; turn++)
+	{
+		short turn_multiplier = turn * 2;
+		unrounded_answer = unrounded_answer + pow(radian_a, turn_multiplier) / factorial_fuction(turn_multiplier) * pow(-1, turn);
+	}
+
+	long double answer = floor(unrounded_answer * 100 + 0.5) / 100;
+	return unrounded_answer;
 }
 
 void sum(long double a, long double b)
@@ -77,30 +110,12 @@ void difference_of_squares(long double a, long double b)
 
 void sine(long double a)
 {
-	long double radian_a = (3.141592653589793 / 180) * a;
-	std::cout << "sin(" << a << ") = " << floor((radian_a - pow(radian_a, 3) / factorial_fuction(3) + 
-	pow(radian_a, 5) / factorial_fuction(5) - 
-    pow(radian_a, 7) / factorial_fuction(7) + 
-    pow(radian_a, 9) / factorial_fuction(9) - 
-    pow(radian_a, 11) / factorial_fuction(11) + 
-    pow(radian_a, 13) / factorial_fuction(13) - 
-    pow(radian_a, 15) / factorial_fuction(15) + 
-    pow(radian_a, 17) / factorial_fuction(17) - 
-    pow(radian_a, 19) / factorial_fuction(19)) * 100 + 0.5) / 100 << std::endl;
+	std::cout << "sin(" << a << ") = " << sin_function(a) << std::endl;
 }
 
 void cosine(long double a)
 {
-	long double radian_a = (3.141592653589793 / 180) * a;
-	std::cout << "cos(" << a << ") = " << floor((1 - pow(radian_a, 2) / factorial_fuction(2) + 
-	pow(radian_a, 4) / factorial_fuction(4) - 
-    pow(radian_a, 6) / factorial_fuction(6) + 
-    pow(radian_a, 8) / factorial_fuction(8) - 
-    pow(radian_a, 10) / factorial_fuction(10) + 
-    pow(radian_a, 12) / factorial_fuction(12) - 
-    pow(radian_a, 14) / factorial_fuction(14) + 
-    pow(radian_a, 16) / factorial_fuction(16) - 
-    pow(radian_a, 18) / factorial_fuction(18)) * 100 + 0.5) / 100 << std::endl;
+	std::cout << "cos(" << a << ") = " << cos_function(a) << std::endl;
 }
 
 void square_equation(long double a, long double b, long double c)
