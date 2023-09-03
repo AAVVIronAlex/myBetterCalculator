@@ -155,7 +155,7 @@ int main()
 	long double a, b, c;
 
 	std::cout << "Hello, welcome to my Calculator" << std::endl;
-	std::cout << "Input either of these sum, difference, squareeq, multiply, division, root, power, percentage, squareofthesum, squareofthedifference, differenceofsquares and there are more coming soon: ";
+	std::cout << "Input either of these sum, difference, squareeq, multiply, division, root, power, percentage, squareofthesum, squareofthedifference, differenceofsquares, sin, cos and there are more coming soon: ";
 	std::string question1;
 	std::cin >> question1;
 
