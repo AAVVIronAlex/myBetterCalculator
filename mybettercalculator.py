@@ -1,5 +1,16 @@
 import math
 
+def sin_function(a):
+    radian_a = (3.141592653589793 / 180) * a
+
+    for turn in range(1, 6):
+        turn_multiplier = turn * 2 + 1
+        radian_a = radian_a + math.pow(radian_a, turn_multiplier) / math.factorial(turn_multiplier) * math.pow(-1, turn)
+
+    answer = round(radian_a, 3)
+
+    return answer
+
 print ("Hello, welcome to my Calculator")
 
 question_1 = input ("Input either of these sum, difference, squareeq, multiply, division, root, power, percentage, squareofthesum, squareofthedifference, differenceofsquares, sin and there are more coming soon: ")
@@ -67,17 +78,7 @@ elif (question_1 == "differenceofsquares"):
 
 elif (question_1 == "sin"):
     a = int (input ("Input the angle in degrees for the sin(angle) formula: "))
-    radian_a = (3.141592653589793 / 180) * a
-    print("sin(", a, ") = ", 
-    round(radian_a - math.pow(radian_a, 3) / math.factorial(3) + 
-    math.pow(radian_a, 5) / math.factorial(5) - 
-    math.pow(radian_a, 7) / math.factorial(7) + 
-    math.pow(radian_a, 9) / math.factorial(9) - 
-    math.pow(radian_a, 11) / math.factorial(11) + 
-    math.pow(radian_a, 13) / math.factorial(13) - 
-    math.pow(radian_a, 15) / math.factorial(15) + 
-    math.pow(radian_a, 17) / math.factorial(17) - 
-    math.pow(radian_a, 19) / math.factorial(19), 3))
+    print("Your answer is:", sin_function(a))
 
 elif (question_1 == "cos"):
     a = int (input ("Input the angle in degrees for the cos(angle) formula: "))
