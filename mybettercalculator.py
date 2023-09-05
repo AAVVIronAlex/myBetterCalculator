@@ -2,18 +2,29 @@ import math
 
 def sin_function(a):
     radian_a = (3.141592653589793 / 180) * a
+    unrounded_answer = radian_a
 
-    for turn in range(1, 6):
+    for turn in range(1, 9):
         turn_multiplier = turn * 2 + 1
-        radian_a = radian_a + math.pow(radian_a, turn_multiplier) / math.factorial(turn_multiplier) * math.pow(-1, turn)
+        unrounded_answer = unrounded_answer + math.pow(radian_a, turn_multiplier) / math.factorial(turn_multiplier) * math.pow(-1, turn)
 
-    answer = round(radian_a, 3)
+    answer = round(unrounded_answer, 3)
+    return answer
 
+def cos_function(a):
+    radian_a = (3.141592653589793 / 180) * a
+    unrounded_answer = 1
+
+    for turn in range(1, 9):
+        turn_multiplier = turn * 2
+        unrounded_answer = unrounded_answer + math.pow(radian_a, turn_multiplier) / math.factorial(turn_multiplier) * math.pow(-1, turn)
+
+    answer = round(unrounded_answer, 3)
     return answer
 
 print ("Hello, welcome to my Calculator")
 
-question_1 = input ("Input either of these sum, difference, squareeq, multiply, division, root, power, percentage, squareofthesum, squareofthedifference, differenceofsquares, sin and there are more coming soon: ")
+question_1 = input ("Input either of these sum, difference, squareeq, multiply, division, root, power, percentage, squareofthesum, squareofthedifference, differenceofsquares, sin, cos and there are more coming soon: ")
 
 if (question_1 == "sum"):
     a = int (input ("Input a, for the a + b formula: "))
@@ -78,21 +89,12 @@ elif (question_1 == "differenceofsquares"):
 
 elif (question_1 == "sin"):
     a = int (input ("Input the angle in degrees for the sin(angle) formula: "))
-    print("Your answer is:", sin_function(a))
+    print("sin(", a, ") = ", sin_function(a))
 
 elif (question_1 == "cos"):
     a = int (input ("Input the angle in degrees for the cos(angle) formula: "))
     radian_a = (3.141592653589793 / 180) * a
-    print("cos(", a, ") = ", 
-    round(1 - math.pow(radian_a, 2) / math.factorial(2) + 
-    math.pow(radian_a, 4) / math.factorial(4) - 
-    math.pow(radian_a, 6) / math.factorial(6) + 
-    math.pow(radian_a, 8) / math.factorial(8) - 
-    math.pow(radian_a, 10) / math.factorial(10) + 
-    math.pow(radian_a, 12) / math.factorial(12) - 
-    math.pow(radian_a, 14) / math.factorial(14) + 
-    math.pow(radian_a, 16) / math.factorial(16) - 
-    math.pow(radian_a, 18) / math.factorial(18), 3))
+    print("cos(", a, ") = ", cos_function(a))
 
 elif (question_1 == "tan"):
     a = int (input ("Input the angle in degrees for the tan(angle) formula(0, 30, 45, 60, 90, 120, 135, 150, 180): "))
