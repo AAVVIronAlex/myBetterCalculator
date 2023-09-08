@@ -52,6 +52,20 @@ long double cos_function(long double a)
 	return unrounded_answer;
 }
 
+long double tan_function(long double a)
+{
+	long double answer;
+	if (a = 90)
+	{
+		std::cout << "tan(" << a << ") is not defined.";
+	}
+	else;
+	{
+		answer = sin_function(a) / cos_function(a);
+	}
+	return answer;
+}
+
 void sum(long double a, long double b)
 {
 	std::cout << "a + b = " << a + b << std::endl;
@@ -271,14 +285,21 @@ int main()
 	{
 		std::cout << "Input the angle in degrees for the sin(angle) formula: ";
 		std::cin >> a;
-		sine(a);
+		std::cout << "sin(" << a << ") = " << sin_function(a) << std::endl;
 	}
 
 	else if (question1 == "cos")
 	{
 		std::cout << "Input the angle in degrees for the cos(angle) formula: ";
 		std::cin >> a;
-		cosine(a);
+		std::cout << "cos(" << a << ") = " << cos_function(a) << std::endl;
+	}
+
+	else if (question1 == "tan")
+	{
+		std::cout << "Input the angle in degrees for the tan(angle) formula: ";
+		std::cin >> a;
+		std::cout << "tan(" << a << ") = " << tan_function(a) << std::endl;
 	}
 
 	else if (question1 == "help")
