@@ -55,14 +55,9 @@ long double cos_function(long double a)
 long double tan_function(long double a)
 {
 	long double answer;
-	if (a = 90)
-	{
-		std::cout << "tan(" << a << ") is not defined.";
-	}
-	else;
-	{
-		answer = sin_function(a) / cos_function(a);
-	}
+
+	answer = sin_function(a) / cos_function(a);
+
 	return answer;
 }
 
@@ -130,6 +125,19 @@ void sine(long double a)
 void cosine(long double a)
 {
 	std::cout << "cos(" << a << ") = " << cos_function(a) << std::endl;
+}
+
+void tanges(long double a)
+{
+	if (a == 90)
+	{
+		std::cout << "tan(" << a << ") is not defined." << std::endl;
+	}
+
+	else
+	{
+		std::cout << "tan(" << a << ") = " << tan_function(a) << std::endl;
+	}
 }
 
 void square_equation(long double a, long double b, long double c)
@@ -285,21 +293,21 @@ int main()
 	{
 		std::cout << "Input the angle in degrees for the sin(angle) formula: ";
 		std::cin >> a;
-		std::cout << "sin(" << a << ") = " << sin_function(a) << std::endl;
+		sine(a);
 	}
 
 	else if (question1 == "cos")
 	{
 		std::cout << "Input the angle in degrees for the cos(angle) formula: ";
 		std::cin >> a;
-		std::cout << "cos(" << a << ") = " << cos_function(a) << std::endl;
+		cosine(a);
 	}
 
 	else if (question1 == "tan")
 	{
 		std::cout << "Input the angle in degrees for the tan(angle) formula: ";
 		std::cin >> a;
-		std::cout << "tan(" << a << ") = " << tan_function(a) << std::endl;
+		tanges(a);
 	}
 
 	else if (question1 == "help")
