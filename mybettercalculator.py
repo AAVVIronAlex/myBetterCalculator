@@ -26,6 +26,10 @@ def tan_function(a):
     answer = sin_function(a) / cos_function(a)
     return answer
 
+def cot_function(a):
+    answer = cos_function(a) / sin_function(a)
+    return answer
+
 print ("Hello, welcome to my Calculator")
 
 question_1 = input ("Input either of these sum, difference, squareeq, multiply, division, root, power, percentage, squareofthesum, squareofthedifference, differenceofsquares, sin, cos and there are more coming soon: ")
@@ -101,32 +105,18 @@ elif (question_1 == "cos"):
     print("cos(", a, ") = ", cos_function(a))
 
 elif (question_1 == "tan"):
-    a = int (input ("Input the angle in degrees for the tan(angle) formula(0, 30, 45, 60, 90, 120, 135, 150, 180): "))
+    a = int (input ("Input the angle in degrees for the tan(angle) formula: "))
     if (a == 90):
         print("tan(", a, ") is not defined.")
     else:
         print("tan(", a, ") = ", cos_function(a))
 
 elif (question_1 == "cot"):
-    a = int (input ("Input the angle in degrees for the cot(angle) formula(0, 30, 45, 60, 90, 120, 135, 150, 180): "))
+    a = int (input ("Input the angle in degrees for the cot(angle) formula: "))
     if (a == 0):
-        print("cot(0) = Not Defined")
-    elif (a == 30):
-        print("cot(30) = sqrt(3)")
-    elif (a == 45):
-        print("cot(45) = 1")
-    elif (a == 60):
-        print("cot(60) = sqrt(3) / 3")
-    elif (a == 90):
-        print("cot(90) = 0")
-    elif (a == 120):
-        print("cot(120) = - sqrt(3) / 3")
-    elif (a == 135):
-        print("cot(135) = - 1")
-    elif (a == 150):
-        print("cot(135) = - sqrt(3)")
-    elif (a == 180):
-        print("cot(180) == Not Defined")
+        print("cot(", a, ") is not defined.")
+    else:
+        print("cot(", a, ") = ", cos_function(a))
 
 elif (question_1 == "squareeq"):
     print ('Input a, for the ax2 + bx + c formula: ')
