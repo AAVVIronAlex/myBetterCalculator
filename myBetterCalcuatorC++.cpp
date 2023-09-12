@@ -55,8 +55,17 @@ long double cos_function(long double a)
 long double tan_function(long double a)
 {
 	long double answer;
-
+	
 	answer = sin_function(a) / cos_function(a);
+
+	return answer;
+}
+
+long double cot_function(long double a)
+{
+	long double answer;
+
+	answer = cos_function(a) / sin_function(a);
 
 	return answer;
 }
@@ -137,6 +146,19 @@ void tanges(long double a)
 	else
 	{
 		std::cout << "tan(" << a << ") = " << tan_function(a) << std::endl;
+	}
+}
+
+void cotanges(long double a)
+{
+	if (a == 0)
+	{
+		std::cout << "cot(" << a << ") is not defined." << std::endl;
+	}
+
+	else
+	{
+		std::cout << "cot(" << a << ") = " << cot_function(a) << std::endl;
 	}
 }
 
@@ -308,6 +330,13 @@ int main()
 		std::cout << "Input the angle in degrees for the tan(angle) formula: ";
 		std::cin >> a;
 		tanges(a);
+	}
+
+	else if (question1 == "cot")
+	{
+		std::cout << "Input the angle in degrees for the cot(angle) formula: ";
+		std::cin >> a;
+		cotanges(a);
 	}
 
 	else if (question1 == "help")
