@@ -339,6 +339,19 @@ int main()
 		cotanges(a);
 	}
 
+	else if (question1 == "e")
+	{
+		short numberOfSums = 10, i;
+		long double e = 1;
+
+		for (i = 1; i <= numberOfSums; i++)
+		{
+			e = e + 1 / factorial_fuction(i);
+		}
+
+		std::cout << "The number E = " << e << std::endl;
+	}
+
 	else if (question1 == "help")
 	{
 		std::cout << "Welcome to the help menu of this program.\n\nHere are some of the options you should consider using:\nsum - Calculating the sum of two numbers.\ndifference - Calculating the difference of the two numbers.\nmultiply - Calculating the product of the two numbers.\ndivision - Calculating the quotient of the two inputed numbers." << std::endl;
