@@ -44,6 +44,41 @@ fn main()
 
         difference(a, b);
     }
+
+    else if question1 == "multiply" 
+    {
+        print!("Input a, for the a * b formula: ");
+        std::io::Write::flush(&mut std::io::stdout()).unwrap();
+        std::io::stdin().read_line(&mut a).unwrap();
+        let a: f64 = a.trim().parse().unwrap();
+
+        print!("Input b, for the a * b formula: ");
+        std::io::Write::flush(&mut std::io::stdout()).unwrap();
+        std::io::stdin().read_line(&mut b).unwrap();
+        let b: f64 = b.trim().parse().unwrap();
+
+        multiplication(a, b);
+    }
+
+    else if question1 == "division" 
+    {
+        print!("Input a, for the a / b formula: ");
+        std::io::Write::flush(&mut std::io::stdout()).unwrap();
+        std::io::stdin().read_line(&mut a).unwrap();
+        let a: f64 = a.trim().parse().unwrap();
+
+        print!("Input b, for the a / b formula: ");
+        std::io::Write::flush(&mut std::io::stdout()).unwrap();
+        std::io::stdin().read_line(&mut b).unwrap();
+        let b: f64 = b.trim().parse().unwrap();
+
+        division(a, b);
+    }
+
+    else
+    {
+        println!("Try again.");
+    }
 }
 
 fn sum(a: f64, b: f64) 
@@ -54,4 +89,14 @@ fn sum(a: f64, b: f64)
 fn difference(a: f64, b: f64)
 {
     println!("a - b = {}", a - b);
+}
+
+fn multiplication(a: f64, b: f64)
+{
+    println!("a * b = {}", a * b);
+}
+
+fn division(a: f64, b: f64)
+{
+    println!("a / b = {}", a / b);
 }
